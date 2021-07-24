@@ -18,6 +18,7 @@
 - Download docker and compose [here](https://docs.docker.com/engine/install/)
 - Clone the repository ```git clone https://github.com/DionVitor/PokeTeam/```
 - Build containers ```make start```
+- Create tables in database ```docker exec -it poke_team python3 manage.py migrate```
 
 ## :heavy_check_mark: Patterns in project
 
@@ -33,6 +34,7 @@
 - [Django REST Framework](https://www.django-rest-framework.org/)
 - [Docker](https://www.docker.com/)
 - [PokeAPI](https://pokeapi.co)
+- [PostgreSQL](https://www.postgresql.org/)
 
 ## :smile: Author
 
