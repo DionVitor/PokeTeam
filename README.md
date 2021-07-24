@@ -16,7 +16,6 @@
 ## :package: Instructions for run the app
 
 - Download docker and compose [here](https://docs.docker.com/engine/install/)
-- Create new folder ```mkdir PokeTeam```
 - Clone the repository ```git clone https://github.com/DionVitor/PokeTeam/```
 - Build containers ```make start```
 
@@ -25,6 +24,7 @@
 - Clean Architecture
 - MTV
 - REST
+- Repository Pattern
 
 ## :hammer: Tech stack
 
