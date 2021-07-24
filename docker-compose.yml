@@ -1,0 +1,30 @@
+version: '3.7'
+
+services:
+    database:
+        image: postgres:11.4
+        container_name: poke_team_db
+        environment:
+            POSTGRES_USER: poke_team
+            POSTGRES_DB: poke_team
+            POSTGRES_PASSWORD: poke_team
+        volumes:
+            - db_data:/var/lib/postgresql/data/
+        networks:
+            - backend
+
+    core:
+        build: .
+        container_name: poke_team
+        volumes:
+          - .:/code
+        ports:
+          - 8000:8000
+        networks:
+          - backend
+
+networks:
+  backend:
+
+volumes:
+  db_data:
