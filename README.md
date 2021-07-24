@@ -15,10 +15,10 @@
 
 ## :package: Instructions for run the app
 
-#### 1) Download docker and compose [here](https://docs.docker.com/engine/install/)
-#### 2) Create new folder ```mkdir PokeTeam```
-#### 3) Clone the repository ```git clone https://github.com/DionVitor/PokeTeam/```
-#### 4) Build containers ```make start```
+- Download docker and compose [here](https://docs.docker.com/engine/install/)
+- Create new folder ```mkdir PokeTeam```
+- Clone the repository ```git clone https://github.com/DionVitor/PokeTeam/```
+- Build containers ```make start```
 
 ## :heavy_check_mark: Patterns in project
 
