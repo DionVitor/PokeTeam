@@ -1,14 +1,26 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status, permissions
+from drf_yasg.utils import swagger_auto_schema
+from drf_yasg import openapi
 
 from core.domain.use_cases.register import register_user
+
+
+username = openapi.Parameter("username", in_=openapi.IN_QUERY, type=openapi.TYPE_STRING, required=True, )
+password = openapi.Parameter("password", in_=openapi.IN_QUERY, type=openapi.TYPE_STRING, required=True)
+password_confirm = openapi.Parameter("password_confirm", in_=openapi.IN_QUERY, type=openapi.TYPE_STRING, required=True)
 
 
 class RegisterAPIView(APIView):
     permission_classes = (permissions.AllowAny,)
 
+    @swagger_auto_schema(manual_parameters=[username, password, password_confirm], tags=["Auth"])
     def post(self, request, *args, **kwargs):
+        """
+        # Endpoint de criação de um novo usuário
+        ---
+        """
         required_query_params = {"username", "password", "password_confirm"}
         query_params = request.query_params
         missing_query_params = required_query_params - query_params.keys()
