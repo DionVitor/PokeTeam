@@ -79,7 +79,7 @@ DATABASES = {
         'NAME': 'poke_team',
         'USER': 'poke_team',
         'PASSWORD': 'poke_team',
-        'HOST': 'poke_team',
+        'HOST': 'poke_team_db',
         'PORT': 5432
     }
 }
