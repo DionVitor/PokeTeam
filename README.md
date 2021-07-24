@@ -1,5 +1,5 @@
 <h1 align="center">PokeTeam</h1>
-<p align="center"> API de gerenciamento de times Pokemon. </p>
+<p align="center"> Pokemon team management API. </p>
 
 <p align="center">
   <a>
@@ -13,23 +13,26 @@
   </a>
 </p>
 
-English | [Português](https://github.com/DionVitor/PokeTeam/blob/master/docs/README-pt_BR.md)
-
-## :smiley: Why?
-
-Why your application is util?
-
-## :heavy_check_mark: Features
-
-- [x] Features
-
 ## :package: Instructions for run the app
 
-#### 1) Why your application run?
+#### 1) Download docker and compose [here](https://docs.docker.com/engine/install/)
+#### 2) Create new folder ```mkdir PokeTeam```
+#### 3) Clone the repository ```git clone https://github.com/DionVitor/PokeTeam/```
+#### 4) Build containers ```make start```
+
+## :heavy_check_mark: Patterns in project
+
+- Clean Architecture
+- MTV
+- REST
 
 ## :hammer: Tech stack
 
 - [Python](https://www.python.org/)
+- [Django](https://www.djangoproject.com/)
+- [Django REST Framework](https://www.django-rest-framework.org/)
+- [Docker](https://www.docker.com/)
+- [PokeAPI](https://pokeapi.co)
 
 ## :smile: Author
 
