@@ -75,10 +75,15 @@ WSGI_APPLICATION = 'poke_team.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'poke_team',
+        'USER': 'poke_team',
+        'PASSWORD': 'poke_team',
+        'HOST': 'poke_team',
+        'PORT': 5432
     }
 }
+
 
 
 # Password validation
