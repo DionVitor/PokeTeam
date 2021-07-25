@@ -17,9 +17,9 @@
 
 ## :package: Instruções para rodar o app
 
-- Instale o docker e compose [here](https://docs.docker.com/engine/install/)
+- Instale o docker e compose [aqui](https://docs.docker.com/engine/install/)
 - Clone o repositório ```git clone https://github.com/DionVitor/PokeTeam/```
-- Build os containers ```make start```
+- Crie os containers ```make start```
 - Crie as tabelas no banco de dados ```make migrate```
 
 ## :keyboard: Como usar a api
