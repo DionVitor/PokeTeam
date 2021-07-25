@@ -3,7 +3,7 @@
 
 <p align="center">
   <a>
-    <img src="https://img.shields.io/badge/progress-10%25-brightgreen.svg" alt="progress">
+    <img src="https://img.shields.io/badge/progress-100%25-brightgreen.svg" alt="progress">
   </a>
   <a>
     <img src="https://img.shields.io/badge/contribuition-welcome-brightgreen.svg" alt="contribution">
@@ -13,21 +13,24 @@
   </a>
 </p>
 
+English | [Português](https://github.com/DionVitor/PokeTeam/blob/master/docs/README-pt_BR.md)
+
 ## :package: Instructions for run the app
 
 - Download docker and compose [here](https://docs.docker.com/engine/install/)
 - Clone the repository ```git clone https://github.com/DionVitor/PokeTeam/```
 - Build containers ```make start```
-- Create tables in database ```docker exec -it poke_team python3 manage.py migrate```
+- Create tables in database ```make migrate```
 
-## How to use the api
+## :keyboard: How to use the api
 
-- Enter in [api documentation](localhost:8000/swagger/)
+- Enter in [swagger documentation](http://localhost:8000/swagger/)
 - Register your user: ```/register```
-- Login: ```/accounts/login``` or in button "Log in" in swagger
+- Login in api: ```/accounts/login``` or in button "Log in" in swagger
 - Create, delete or get team: ```/manipulate_team```
 - Search pokemons to add in your team: ```/search_pokemon```
 - Add or delete pokemons in yout team: ```/pokemon_team```
+- To logout: ```/accounts/logout``` or in button "Django Logout" in swagger
 
 ## :heavy_check_mark: Patterns in project
 
