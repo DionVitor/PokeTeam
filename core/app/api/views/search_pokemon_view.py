@@ -8,17 +8,14 @@ from core.domain.use_cases.search_pokemon import get_pokemon
 
 
 pokemon_param = openapi.Parameter("pokemon", in_=openapi.IN_QUERY, type=openapi.TYPE_STRING, required=True)
+summary = "Pesquisa de pokemon, por id ou nome."
 
 
 class SearchPokemonAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
-    @swagger_auto_schema(manual_parameters=[pokemon_param], tags=["Pokemon"])
+    @swagger_auto_schema(manual_parameters=[pokemon_param], tags=["Pokemon"], operation_summary=summary)
     def get(self, request, *args, **kwargs):
-        """
-        # Endpoint de pesquisa de pokemon, por id ou nome.
-        ---
-        """
         query_params = request.query_params
 
         filter = query_params.get("pokemon", None)
