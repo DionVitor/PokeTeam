@@ -4,5 +4,5 @@ from typing import Dict
 
 class ABCGetPokemonGateway(ABC):
     @abstractmethod
-    def search_pokemon(self, filter: Dict):
+    def search_pokemon(self, filter: Dict) -> Dict:
         pass

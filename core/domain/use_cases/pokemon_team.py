@@ -37,5 +37,20 @@ class PokemonManipulator:
         response = self.repository().add_pokemon_in_team(username, pokemon)
         return response
 
-    def remove_pokemon_in_team(self, username: str, filter: str):
-        pass
+    def remove_pokemon_in_team(self, username: str, filter: str) -> Dict:
+        pokemons_in_team = self._get_all_pokemons_in_team(username)
+        pokemon = self._get_pokemon(filter)
+
+        if hasattr(pokemons_in_team, "keys") and "Erro" in pokemons_in_team.keys():
+            error = pokemons_in_team
+            return error
+
+        if "Erro" in pokemon.keys():
+            error = pokemon
+            return error
+
+        if pokemon["name"] not in [poke["name"] for poke in pokemons_in_team]:
+            return {"Erro": f"O pokemon {pokemon['name']} não está em seu time."}
+
+        response = self.repository().remove_pokemon_in_team(username, pokemon)
+        return response

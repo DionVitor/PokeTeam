@@ -1,7 +1,7 @@
 from typing import Dict
 
 
-def register_user(user: Dict):
+def register_user(user: Dict) -> Dict:
     repository = register_user.repository()
 
     if user["password"] != user["password_confirm"]:
