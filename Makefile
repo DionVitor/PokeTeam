@@ -17,3 +17,7 @@ restart:
 	$(info ${PURPLE}Restarting containers.${RESET})
 	@docker-compose stop
 	@docker-compose up -d
+
+migrate:
+	$(info ${PURPLE}Migrating.${RESET})
+	@docker exec -it poke_team python3 manage.py migrate
