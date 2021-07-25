@@ -17,7 +17,7 @@ class RegisterAPIView(APIView):
     permission_classes = [permissions.AllowAny]
 
     @swagger_auto_schema(manual_parameters=params, tags=["Auth"], operation_summary="Criação de um novo usuário.")
-    def post(self, request, *args, **kwargs):
+    def post(self, request):
         required_query_params = {"username", "password", "password_confirm"}
         query_params = request.query_params
         missing_query_params = required_query_params - query_params.keys()

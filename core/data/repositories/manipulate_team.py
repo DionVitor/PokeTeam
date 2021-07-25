@@ -1,21 +1,23 @@
 from django.db.utils import IntegrityError
 
+from typing import Dict
+
 from core.domain.abstract_repositories import ABCTeamManipulatorRepository
 from users.models import User
 from core.models import Team
 
 
 class TeamManipulatorManipulatorRepository(ABCTeamManipulatorRepository):
-    def get_team(self, username: str):
+    def get_team(self, username: str) -> Dict:
         try:
             user_id = User.objects.get(username=username).id
             team = Team.objects.get(user=user_id)
         except Team.DoesNotExist:
             return {"Erro": f"Não foi encontrado um time pokemon do usuário {username}"}
 
-        return {"Sucesso": f"{team.pokemons}"}
+        return {"Sucesso": team.pokemons}
 
-    def create_team(self, username: str):
+    def create_team(self, username: str) -> Dict:
         try:
             user = User.objects.get(username=username)
             Team.objects.create(user=user)
@@ -24,7 +26,7 @@ class TeamManipulatorManipulatorRepository(ABCTeamManipulatorRepository):
 
         return {"Sucesso": f"Foi criado um time pokemon para {username}."}
 
-    def delete_team(self, username: str):
+    def delete_team(self, username: str) -> Dict:
         try:
             user = User.objects.get(username=username)
             team = Team.objects.get(user=user)

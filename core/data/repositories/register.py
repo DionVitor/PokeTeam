@@ -7,7 +7,7 @@ from core.domain.abstract_repositories import ABCRegisterRepository
 
 
 class RegisterRepository(ABCRegisterRepository):
-    def register(self, user: Dict):
+    def register(self, user: Dict) -> Dict:
         username = user["username"]
 
         try:

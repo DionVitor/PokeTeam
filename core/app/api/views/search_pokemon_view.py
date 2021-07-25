@@ -15,7 +15,7 @@ class SearchPokemonAPIView(APIView):
     permission_classes = [permissions.IsAuthenticated]
 
     @swagger_auto_schema(manual_parameters=[pokemon_param], tags=["Pokemon"], operation_summary=summary)
-    def get(self, request, *args, **kwargs):
+    def get(self, request):
         query_params = request.query_params
 
         filter = query_params.get("pokemon", None)
