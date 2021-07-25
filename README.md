@@ -20,6 +20,15 @@
 - Build containers ```make start```
 - Create tables in database ```docker exec -it poke_team python3 manage.py migrate```
 
+## How to use the api
+
+- Enter in [api documentation](localhost:8000/swagger/)
+- Register your user: ```/register```
+- Login: ```/accounts/login``` or in button "Log in" in swagger
+- Create, delete or get team: ```/manipulate_team```
+- Search pokemons to add in your team: ```/search_pokemon```
+- Add or delete pokemons in yout team: ```/pokemon_team```
+
 ## :heavy_check_mark: Patterns in project
 
 - Clean Architecture
