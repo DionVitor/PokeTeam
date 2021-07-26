@@ -19,6 +19,7 @@ English | [Português](https://github.com/DionVitor/PokeTeam/blob/master/docs/RE
 
 - Download docker and compose [here](https://docs.docker.com/engine/install/)
 - Clone the repository ```git clone https://github.com/DionVitor/PokeTeam/```
+- Go to repository ```cd PokeTeam/```
 - Build containers ```make start```
 - Create tables in database ```make migrate```
 
