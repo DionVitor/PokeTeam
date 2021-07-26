@@ -19,6 +19,7 @@
 
 - Instale o docker e compose [aqui](https://docs.docker.com/engine/install/)
 - Clone o repositório ```git clone https://github.com/DionVitor/PokeTeam/```
+- Vá para o repositório ```cd PokeTeam/```
 - Crie os containers ```make start```
 - Crie as tabelas no banco de dados ```make migrate```
 
