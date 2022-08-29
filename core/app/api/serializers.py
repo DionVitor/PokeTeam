@@ -1,5 +1,8 @@
 from typing import Dict, List, Union
 
+from rest_framework import serializers
+from users.models import User
+
 
 def pokemon_serializer(pokemon: Dict) -> Dict:
     stats = pokemon["stats"]
@@ -21,3 +24,9 @@ def list_pokemon_serializer(pokemon_list: List) -> Union[Dict, List]:
         }
 
     return pokemon_list
+
+
+class UserSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = User
+        fields = ["username", "email", "first_name", "last_name"]
