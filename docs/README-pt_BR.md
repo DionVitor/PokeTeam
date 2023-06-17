@@ -49,7 +49,7 @@
 - [PokeAPI](https://pokeapi.co)
 - [PostgreSQL](https://www.postgresql.org/)
 
-## :smile: Author
+## :smile: Autor
 
 Feito por Dion Vítor, contatos:
 
